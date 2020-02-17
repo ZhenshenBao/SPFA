@@ -322,6 +322,6 @@ SPFA_per <- function(mdir = NULL, pathfilename = NULL, normal = NULL, cancer = N
   genes <- factor(names(endscore),levels=names(endscore))
   scores <- data.frame(genes,perturbation=as.numeric(endscore))
   p<-ggplot(scores,aes(x=scores$genes,y=scores$perturbation))+geom_bar(stat="identity")+theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5))+theme(panel.grid=element_blank())+theme(panel.grid.major = element_line(colour = NA))+theme(legend.position="none")
-  return(p+xlab("functionality genes")+ylab("The abnormal perturbation to the functionality genes"))
+  return(p+xlab("Effector genes")+ylab("Signal variation received by effector genes"))
 }
 
